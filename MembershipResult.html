@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .result {
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            color: #007BFF;
+        }
+        p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="result">
+        <h2>Form Submitted</h2>
+        <p><strong>Name:</strong> <span id="result-name"></span></p>
+        <p><strong>Birthday:</strong> <span id="result-birthday"></span></p>
+        <p><strong>Age:</strong> <span id="result-age"></span></p>
+        <p><strong>Address:</strong> <span id="result-address"></span></p>
+        <p><strong>Email:</strong> <span id="result-email"></span></p>
+        <p><strong>Gender:</strong> <span id="result-gender"></span></p>
+        <p id="payment-message" style="color: green; font-weight: bold;"></p>
+    </div>
+
+    <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param) || "Not provided";
+        }
+
+        document.getElementById("result-name").textContent = getQueryParam("name");
+        document.getElementById("result-birthday").textContent = getQueryParam("birthday");
+        document.getElementById("result-age").textContent = getQueryParam("age");
+        document.getElementById("result-address").textContent = getQueryParam("address");
+        document.getElementById("result-email").textContent = getQueryParam("email");
+        document.getElementById("result-gender").textContent = getQueryParam("gender");
+
+        const paymentMessage = localStorage.getItem("paymentMessage");
+        if (paymentMessage) {
+            document.getElementById("payment-message").textContent = paymentMessage;
+        }
+    </script>
+</body>
+</html>

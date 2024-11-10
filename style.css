@@ -1,0 +1,85 @@
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevents scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Full-screen background image styling */
+.Background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Sends background behind other content */
+}
+
+.Background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Centers the background image */
+}
+
+/* Container for the main content */
+.images-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 80%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* Adds semi-transparent background */
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1; /* Ensures content appears above the background */
+}
+
+/* Styling for images and text blocks */
+.images-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Image styling */
+.images-container img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Main title styling */
+.images-container h1 {
+    grid-column: span 2; /* Span the main title across both columns */
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Subtitle styling */
+.images-container h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Paragraph styling */
+.images-container p {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.4;
+    padding: 0 10px;
+}

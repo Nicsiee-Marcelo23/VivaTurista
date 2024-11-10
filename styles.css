@@ -1,0 +1,147 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; 
+}
+
+.video-container {
+    position: relative;
+    height: 40vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.topcontent {
+    position: relative;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    padding: 20px;
+    text-shadow: 
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+}
+
+h1, h2, h4 {
+    margin: 10px 0;
+}
+
+.maincontent {
+    padding: 20px;
+}
+
+
+nav {
+    background-color: #ffeb33;
+    overflow: visible; 
+    position: relative; 
+    z-index: 1000; 
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 14px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: rgb(246, 31, 160);
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+
+nav ul li ul {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #444444;
+    min-width: 200px;
+    z-index: 1000; 
+}
+
+nav ul li ul li {
+    display: block;
+    width: 100%;
+}
+
+nav ul li ul li a {
+    padding: 10px;
+    color: #ddd;
+    background-color: #444444;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+
+nav ul li a:hover, nav ul li ul li a:hover {
+    background-color: #555555;
+    color: white;
+    border-radius: 5px;
+}
+
+.Logo {
+    height: 300px; 
+    margin-top: 20px; 
+    background-image: url('VTselfmadelogo1.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    opacity: 0.1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+    overflow: hidden; 
+    z-index: -1; 
+}
+
+.Logo p {
+    position: absolute;
+    bottom: 250px; 
+    width: 100%;
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    font-weight: bolder;
+
+}
